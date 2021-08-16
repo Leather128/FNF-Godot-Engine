@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://DownNoteSprite.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://LeftNoteSprite.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://NotePicker.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Road.gd" type="Script" id=4]
+[ext_resource path="res://UpNoteSprite.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://RightNoteSprite.tres" type="SpriteFrames" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Road" type="AnimatedSprite"]
+frames = SubResource( 1 )
+script = ExtResource( 4 )
+
+[node name="NotePicker" parent="." instance=ExtResource( 3 )]
+position = Vector2( 64, 64 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 2 )
+
+[node name="NotePicker2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 144, 64 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 1 )
+line = 2
+
+[node name="NotePicker3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 224, 64 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 5 )
+line = 3
+
+[node name="NotePicker4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 304, 64 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 6 )
+line = 4
+
+[node name="BarsNode" type="Node2D" parent="."]
+position = Vector2( 64, 64 )

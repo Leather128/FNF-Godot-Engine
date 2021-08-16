@@ -1,0 +1,21 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=2]
+
+[ext_resource path="res://arrows/up confirm0004.png" type="Texture" id=1]
+[ext_resource path="res://arrows/up confirm0002.png" type="Texture" id=2]
+[ext_resource path="res://arrows/arrow static_up.png" type="Texture" id=3]
+[ext_resource path="res://arrows/up press0001.png" type="Texture" id=4]
+[ext_resource path="res://arrows/up confirm0003.png" type="Texture" id=5]
+[ext_resource path="res://arrows/up confirm0001.png" type="Texture" id=6]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "confirm",
+"speed": 24.0
+} ]

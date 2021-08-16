@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://arrows/green.png" type="Texture" id=1]
+[ext_resource path="res://arrows/blue.png" type="Texture" id=2]
+[ext_resource path="res://arrows/purple.png" type="Texture" id=3]
+[ext_resource path="res://arrows/red.png" type="Texture" id=4]
+[ext_resource path="res://note/short_note.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 28, 28 )
+
+[node name="Note" type="AnimatedSprite"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+script = ExtResource( 5 )
+
+[node name="Area" type="Area2D" parent="." groups=[
+"note",
+]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="Area" to="." method="_on_Area_area_entered"]
+[connection signal="area_exited" from="Area" to="." method="_on_Area_area_exited"]

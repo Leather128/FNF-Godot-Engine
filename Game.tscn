@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Road.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Music.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game.gd" type="Script" id=26]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource( 26 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+current = true
+
+[node name="Music" parent="." instance=ExtResource( 2 )]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 839.335
+margin_top = 584.005
+margin_right = 1022.33
+margin_bottom = 598.005
+text = "Long Notes Currently Broken"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="Node2D" parent="."]
+
+[node name="Road" parent="HUD" instance=ExtResource( 1 )]
+position = Vector2( 50, 50 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/HELLCLOWN [Tricky Mod].ogg-fabb81a01de59707059baa9bf6cb4cbd.oggstr"
+
+[deps]
+
+source_file="res://HELLCLOWN [Tricky Mod].ogg"
+dest_files=[ "res://.import/HELLCLOWN [Tricky Mod].ogg-fabb81a01de59707059baa9bf6cb4cbd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
