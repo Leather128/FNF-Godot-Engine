@@ -103,9 +103,10 @@ func _process(_delta):
 			multi = -1
 		
 		# awesome hold note math magic by Scarlett
-		var lineY = (sustain_length * (SCROLL_DISTANCE * MusicController.scroll_speed * MusicController.scroll_speed / SCROLL_TIME) * multi) - holdSprs[key][1].get_height()
-		if (lineY <= 0):
-			lineY = 0
+		var lineY = (sustain_length * (SCROLL_DISTANCE * MusicController.scroll_speed * MusicController.scroll_speed / SCROLL_TIME) * multi)
+		
+		#if (lineY <= 0):
+		#	lineY = 0
 		
 		$Line2D.points[1] = Vector2(0, lineY)
 		update()
