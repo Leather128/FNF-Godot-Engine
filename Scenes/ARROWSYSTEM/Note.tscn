@@ -10,7 +10,7 @@ script = ExtResource( 2 )
 [node name="Line2D" type="Line2D" parent="."]
 points = PoolVector2Array( 0, 0, 0, 0 )
 width = 50.0
-default_color = Color( 1, 1, 1, 1 )
+default_color = Color( 1, 1, 1, 0.501961 )
 texture = ExtResource( 3 )
 texture_mode = 1
 
